@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+</head>
+<body>
+
+    <h2>Contact Form</h2>
+    
+    <form action="submit.php" method="post">
+        <label for="name">Full Name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" ><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <br><br>
+        <label for="number">Number of attendees:</label><br>
+        <input type="number" id="number" name="number" min="1" max="10"><br><br>
+        
+        <label for="date">Event Time</label><br>
+        <input type="date" id="date" name="date"min="2025-08-08"><br>
+        <br>
+
+        <label for="eventType">Event Type:</label>
+        <select id="eventType" name="eventType" required>
+            <option value="" disabled selected>Select an event type</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="webinar">Webinar</option>
+            <option value="bootcamp">Bootcamp</option>
+        </select>
+        <br><br>
+        <label for="time">Event Time</label><br>
+        <input type="time" name="time" id="time"><br>
+        <br>
+        <label for="text">T-shirt size</label>
+        <input type="radio" id="sizeS" name="tshirtSize" value="S">
+        <label for="sizeS">S</label>
+
+        <input type="radio" id="sizeM" name="tshirtSize" value="M">
+        <label for="sizeM">M</label>
+
+        <input type="radio" id="sizeL" name="tshirtSize" value="L">
+        <label for="sizeL">L</label>
+
+        <input type="radio" id="sizeXL" name="tshirtSize" value="XL">
+        <label for="sizeXL">XL</label>
+        <br><br>
+
+        <label for="text">Dietary Restrictions :</label>
+        <input type="checkbox" id="vegetarian" name="dietary" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+
+        <input type="checkbox" id="glutenFree" name="dietary" value="Gluten-Free">
+        <label for="glutenFree">Gluten-Free</label>
+
+        <input type="checkbox" id="sugarFree" name="dietary" value="sugar-Free">
+        <label for="sugarFree">Sugar-Free</label><br><br>
+
+
+
+        <label for="comments" rows="4" cols="50" maxlength="250">Comments/Questions:</label><br>
+        <input type="text" id="comment" name="comment">
+
+        <button type="submit">submit</button>
+    </form>
+
+</body>
+</html>
